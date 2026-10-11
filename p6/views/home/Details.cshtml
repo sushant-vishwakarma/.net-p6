@@ -1,0 +1,36 @@
+```html
+@model p6.Models.Product
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <div>
+        <h1>Product Details</h1>
+
+        <h2>@Model.Name</h2>
+
+        <h3>Category: @Model.Category</h3>
+
+        <h3>Price: @Model.Price</h3>
+
+        <p>@Model.Description</p>
+
+        <img src="@Model.ImageUrl"
+             width="200"
+             height="200"
+             alt="@Model.Name" />
+
+        <p>
+            @Html.ActionLink("Back to Main Page", "Index")
+        </p>
+    </div>
+</body>
+</html>
+```
